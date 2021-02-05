@@ -186,7 +186,7 @@ case '0139':
     res.innerHTML= `O Codígo ${cod} é da cidade de : <br> JUATUBA, <br>. REGIAO : BT <br> BAIRRO : JUATUBA `
 break;
 case '0113':
-    res.innerHTML= `O Codígo ${cod} é da cidade de : <br> MARIO CAMPOS, <br>. REGIAO : BT <br> BAIRRO : MARIO CAMPOS `
+    res.innerHTML= `O Codígo ${cod} é da cidade de : <br> MARIO CAMPOS, <br> REGIAO : BT <br> BAIRRO : MARIO CAMPOS `
 break;
 case '3413':
     res.innerHTML= `O Codígo ${cod} é da cidade de : <br> MATEUS LEME, <br>. REGIAO : BT <br> BAIRRO : MATEUS LEME`
