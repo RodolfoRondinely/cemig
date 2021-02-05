@@ -62,11 +62,11 @@ body{
     padding: 1% 3%;
 }
 h1{
-    font-size: 4em;
+    font-size: 2em;
     padding: 1%;
 }
 .containner label{
-    font-size: 3em;
+    font-size: 2em;
 }
 .containner input{
     padding: 2%;
@@ -78,13 +78,13 @@ h1{
 }
 a{
     padding-top: 4%;
-    font-size: 3em;
+    font-size: 2em;
     text-decoration: none;
 }
 #res{
     background: black;
     color: blanchedalmond;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 1em;
 }
 }
