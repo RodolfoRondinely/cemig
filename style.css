@@ -27,19 +27,109 @@ body{
     padding-bottom: 3%;
 }
 .containner input{
-    padding: 5px;
-    margin: 15px;
+    margin: 10px;
     border-radius: 15px;
     text-align: center;
-    color: cadetblue;
+    color: white;
     font-size: x-large;
     cursor: pointer;
+    outline: 0;
+
 }
-.containner label{
-    text-align: left;
-    padding-left: 3%;
-    font-size:medium;
-    font-weight:900;
+#codigo{
+    width: 70%;
+    background: darkgrey;
+    color    :rebeccapurple;
+    font-weight: bold;
+    border-width:4px;
+    border-style: outset;
+}
+#listabairro{
+    width: 90%;
+    border-radius: 15px;
+    text-transform:uppercase;
+}
+#fieldbairro{
+    width: 100%;
+    text-align-last: center;
+}
+.pesquisa{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+.pesqbairro{
+    text-transform: uppercase;
+    border-style: outset;
+    box-shadow: 5px 5px 5px ;  
+    transition: .5s ease-out;  
+    margin: 5% 5% 5% 1%;
+    height: 50px;
+    padding: 0 5px 0 5px;
+}
+fieldset{
+    border-style: inset;
+    border-color:yellowgreen;
+    border-radius: 15px;
+    margin: 5px;
+
+}
+fieldset select{
+    height: 40px;
+    text-align: center;
+    background: darkgrey;
+    color    :rebeccapurple;
+    
+}
+fieldset select option{
+color:gainsboro;
+}
+#fieldcodigo{
+    width: 40%;
+}
+#listabairro{
+    font-size: 1rem;
+    font-weight:bold;
+    margin-top: 10px;
+    border-width:4px;
+    border-style: outset;
+    cursor: pointer;
+    outline: 0;
+
+}
+#listabairro:hover{
+    border-color: cornflowerblue;
+
+}
+.pesqbairro{
+    background: rgb(22, 121, 47);
+}
+.pesqbairro:hover , #fieldbairro input:hover{
+    background-color: rgb(120, 206, 156);
+    color: darkslateblue;
+    font-weight: 700;
+    border-width:4px;
+    border-style: outset;
+}
+.pesquisa input:hover{
+    border-width:4px;
+    border-style: outset;
+    border-color: cornflowerblue;
+
+}
+.optlabel{
+    font-size: 1rem;
+    background:rgb(70, 73, 80);
+    color: rgb(21, 255, 0);
+}
+.optar{
+    background: rgb(114, 81, 114);
+}
+.optsg{
+    background: rgb(87, 82, 116);
+}
+.optsl{
+    background: rgb(79, 74, 105);
 }
 #res{
     background: cornsilk;
@@ -47,10 +137,50 @@ body{
     padding: 3%;
     font-size: x-large;
 }
+.btnbusca img{
+    width: 60px;
+    border-radius: 100%;
+    margin-top: 35px;
+}
+.btnbusca img:hover{
+    border-style: outset;
+    border-width: 4px;
+    border-color: cornflowerblue;
+    cursor:pointer;
+    box-shadow:1px 1px 10px 1px rgb(230, 238, 238);
+}
+
 @media (max-width:799px) {
 
     body{
         background:green
+    }
+    .pesquisa{
+        display: flex;flex-direction: column;
+    }
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        width: 100%;
+        align-items: center;
+    }
+    #fieldcodigo{
+        width: 100%;
+    }
+    .btnbusca{
+        width: 40%;
+        justify-items: center;
+    }
+    ::placeholder{
+        font-size: 80%;
+    }
+    #codigo{
+        width: 50%;
+    }
+    #listabairro {
+        width:100%;
+        margin: 5%  0%;
     }
 .containner{
     width: 100%;

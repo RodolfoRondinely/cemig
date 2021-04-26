@@ -1,27 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Cemig Cidades</title>
 </head>
+
 <body>
     <div class="containner">
-<img src="./img/logoCemig.jpg" alt="">
-        <h1>Consultar Codígos das cidades</h1>
-        <label for="codigo">Digite o Codígo da Cidade</label>
-        <input type="number" name="codigo" id="codigo" placeholder="Digite o codigo da cidade aqui">
+        <img src="./img/logoCemig.jpg" alt="">
+        <h1>Consultar Códigos das cidades</h1>
+        <div class="pesquisa">
+            <fieldset id="fieldcodigo">
+                <legend>Código</legend>
+                <input type="number" name="codigo" id="codigo" placeholder="Codigo">
+                <div class="btnbusca">
+                    <img src="./img/botao.jpg" alt="" onclick="pesquisar()">
+                </div>
 
-        <input type="button" value="Pesquisar" onclick="pesquisar()">
-<div id="res">
-    ...
-</div>
-<a href="https://wa.me/5531971593195">&copy Desenvolvido por Rodolfo Rondinely Web Developer;</a>
+            </fieldset>
+            <fieldset id="fieldbairro">
+                <legend>Pesquisar por Cidades</legend>
+                <select name="" id="listabairro">
+                    <option value="ERROR 404, LOCAL PESQUISADO EM BRANCO" selected></option>
+                    <optgroup label="Ar-Anel Rodoviario" class="optlabel optar">
+                        <option value="8022">CONTAGEM</option>
+                        <option value="8012">BARREIRO</option>
+                        <option value="8000">GENERICO</option>
+                        <option value="8017">NOVA SUIÇA</option>
+                        <option value="8014">PEDRO II</option>
+                        <option value="8021">SÃO VICENTE</option>
+                        <option value="0101">CIDADE INDUSTRIAL</option>
+                        <option value="0530">ELDORADO</option>
+                        <option value="0780">NOSSA FAZENDA</option>
+                        <option value="0631">PADRE EUSTAQUIO</option>
+                        <option value="2069">TECNOPOLIS</option>
+                        <option value="0729">IPÊ AMARELO</option>
+                        <option value="0104">IBIRITÉ</option>
+                        <option value="8332">CONVIVER</option>
+                        <option value="8016">CENTRO BELO HORIZONTE</option>
+                        <option value="8024">CENTRO SUL BELO HORIZONTE</option>
+                        <option value="8020">CIDADE NOVA</option>
+                        <option value="8019">ITAMBE</option>
+                        <option value="8023">ITAMBE SUB-ESTAÇÃO</option>
+                        <option value="1988">JARDIM CASTANHEIRA</option>
+                        <option value="0663">NOVA VISTA</option>
+                        <option value="8018">SAVASSI</option>
+                        <option value="8013">SANTO AGOSTINHO</option>
+                        <option value="0120">NOVA LIMA</option>
+                        <option value="1572">RETIRO CHALÉ</option>
+                        <option value="0689">RETIRO PEDRAS</option>
+                        <option value="0762">VILA DEL REY</option>
+                        <option value="0122">RAPOSOS</option>
+                        <option value="0121">RIO ACIMA</option>
+                    </optgroup>
+
+                    <!-- REGIOES SG- SÃO GABRIEL -->
+                    <optgroup label="SG- São Gabriel" class="optlabel optsg">
+                        <option value="0220">RIBEIRÃO DAS NEVES</option>
+                        <option value="8025">UFMG CAMPUS</option>
+                        <option value="8015">SÃO LUIZ</option>
+                        <option value="8011">VENDA NOVA</option>
+                        <option value="8010">VILARINHO</option>
+                        <option value="0119">CAETE</option>
+                        <option value="0183">CARDEAL MOTA</option>
+                        <option value="0334">GONGO SOCO</option>
+                        <option value="0127">JABOTICATUBAS</option>
+                        <option value="0221">JUSTINOPOLIS</option>
+                        <option value="0128">LAGOA SANTA</option>
+                        <option value="0137">RAVENA</option>
+                        <option value="0108">SANTA LUZIA</option>
+                        <option value="0129">SÃO JOSE DA LAPA</option>
+                        <option value="0555">TAQUARAÇU DE BAIXO</option>
+                        <option value="0140">TAQUARAÇU DE MINAS</option>
+                        <option value="0126">VESPASIANO</option>
+                    </optgroup>
+                    <!-- BAIRROS DA REGIAO DE BETIM -->
+                    <optgroup label="BT- BETIM" class="optlabel optbt">
+                        <option value="0239">ANDIROBA</option>
+                        <option value="0653">BARREIRAS</option>
+                        <option value="0109">BETIM</option>
+                        <option value="0107">BRASILEIA</option>
+                        <option value="0110">BRUMADINHO</option>
+                        <option value="0141">DIVISA BETIM / ESMERALDAS</option>
+                        <option value="0111">ESMERALDAS</option>
+                        <option value="0112">IGARAPÉ</option>
+                        <option value="0139">JUATUBA</option>
+                        <option value="0113">MARIO CAMPOS</option>
+                        <option value="3413">MATEUS LEME</option>
+                        <option value="0783">RIACHO III</option>
+                        <option value="0742">SÃO CAETANO</option>
+                        <option value="0115">SÃO JOAQUIM DE BICAS</option>
+                        <option value="0116">SARZEDO</option>
+                        <option value="0240">VARGEM BENTO DA COSTA</option>
+                        <option value="0698">VILA UNIVERSAL</option>
+                    </optgroup>
+
+                    <!-- BAIRROS DA REGIÃO DE SETE LAGOAS -->
+                    <optgroup label="SL- SETE LAGOAS" class="optlabel optsl">
+                        <option value="0215">ARACI</option>
+                        <option value="0236">BALDIM</option>
+                        <option value="0203">CAHOEIRA DA PRATA</option>
+                        <option value="0207">CAETANOPOLIS</option>
+                        <option value="0222">CAPIM BRANCO</option>
+                        <option value="0223">CONFINS</option>
+                        <option value="0204">CORDISBURGO</option>
+                        <option value="0208">FORTUNA DE MINAS</option>
+                        <option value="0209">FUNILÂNDIA</option>
+                        <option value="0210">INHAUMA</option>
+                        <option value="0211">JEQUITIBA</option>
+                        <option value="0219">MATOZINHOS</option>
+                        <option value="0206">PARAOPEBA</option>
+                        <option value="0218">PEDRO LEOPOLDO</option>
+                        <option value="0213">PRUDENTE DE MORAIS</option>
+                        <option value="0216">SANTANA DO PIRAPAMA</option>
+                        <option value="4123">SANTANA DO RIACHO</option>
+                        <option value="0201">SETE LAGOAS</option>
+                        <option value="0820">CONFINS</option>
+                        <option value="0710">TREVÃO</option>
+                    </optgroup>
+
+                </select>
+                <!--  <legend>Pesquisar por bairro</legend>
+    <input list="bairro" id="listabairro" placeholder="Pesquise o Bairro">
+    <datalist id="bairro" name="bairro">
+        <option value="Contagem">8022</option>
+        <option value="Barreiro">8012</option>
+    </datalist> -->
+                <!--  <input type="button" value="Pesquisar" onclick="pesqbairro()" class="pesqbairro"> -->
+                <div class="btnbusca">
+                    <img src="./img/botao.jpg" alt="" onclick="pesqbairro()">
+                </div>
+            </fieldset>
+
+        </div>
+        <div id="res">
+            ...
+        </div>
+        <a href="https://wa.me/5531971593195">&copy Desenvolvido por Rodolfo Rondinely Web Developer;</a>
 
     </div>
-<script src="script.js"></script>
-    
+    <script src="script.js"></script>
+
 </body>
 
 </html>
